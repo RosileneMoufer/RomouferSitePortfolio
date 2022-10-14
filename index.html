@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="description" content="Tutotial about Landingpage." />
+        <meta name="author" content="Rosilene Moufer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css" /> 
+        <title>Landpage</title>
+        <script type="text/javascript" src="data/data.js"></script>
+      </head>
+
+    <body>
+        <header id="#home">
+            <h3>Romoufer</h3>
+
+            <button aria-label="Abrir menu"  aria-controls="menu" aria-haspopup="true" aria-expanded="false"
+              id="menu-mobile"><span id="hamburger"></span></button>
+
+            <nav id="nav" role="menu">
+                <a role="menuitem" href="#home">Home</a>
+                <a role="menuitem" href="#section-about">Sobre</a>
+                <a role="menuitem" href="#">Contato</a>
+                <a role="menuitem" href="#" class="link-portfolio">Portfólio</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="section-home">
+                <img id="section-home-left" src="assets/foto-rosilene.jpg" width="50%">
+
+                <div id="section-home-right">
+                    <div id="section-home-right-text">
+                        <h1>Olá,</h1>
+
+                        <p>eu sou Rosilene Fernandes, tenho 27 anos e sou desenvolvedora de softwares há 11 anos.</p>
+
+                        <p>
+                          Tudo começou em 2011 quando eu comecei a estudar HTML e CSS, construindo meus primeiros sites.
+                          Atualmente estudo Flutter e React Native.
+                        </p>
+
+                        <p>
+                          Conheça mais sobre meu trabalho através da Romoufer Academy, onde eu ensino algumas linguagens 
+                          de programação de forma prática com projetos. Você pode conhecer
+                          clicando no botão abaixo
+                        </p>
+                    </div>
+               
+                  
+                    <a id="section-home-right-button-a" href="#">
+                        Romoufer Academy
+                    </a>
+              
+                </div>
+            </section>
+
+            <section id="section-about">
+                <h2>O que fiz até aqui</h2>
+
+                <div id="timeline">
+
+                  <script type="text/javascript">
+                    function init() {
+                      var timeline = document.getElementById("timeline");
+              
+                      for (i = 0; i < data.length; i++) {
+                        let position;
+
+                        if (i % 2 != 0) {
+                          position = "right"; 
+                        } else {
+                          position = "left";                      
+                        } 
+
+                        let content = `<div class='container ` + position + `'>
+                                          <div class='date'>` + data[i].date + `</div>
+                                          <div class='content'>
+                                            <h2>` + data[i].title + `</h2>
+                                            <p>` + data[i].description + `</p>
+                                          </div>
+                                        </div>`;
+
+                          timeline.innerHTML = timeline.innerHTML + content;
+                      }
+                    }
+                    
+                    window.onload = init;
+                  </script>
+
+                </div>
+            </section>
+
+            <section id="social-medias">
+              <h2>Siga-me nas redes sociais</h2>
+
+              <div id="box-images">
+                  <a href="https://br.linkedin.com/in/rosilenemoufer" target="_blank">
+                    <img class="logo" src="assets/social-media/linkedin.svg" alt="Linkedin" width="30%" />
+                  </a>
+
+                  <a href="https://github.com/rosilenemoufer" target="_blank">
+                    <img class="logo" src="assets/social-media/github.svg" alt="GitHub" width="31%" />
+                  </a>
+
+                  <a href="https://www.instagram.com/romoufer/" target="_blank">
+                    <img class="logo" src="assets/social-media/instagram-logo.svg" alt="Instagram" width="30%" />
+                  </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p id="email">rosilenemourafernandes@gmail.com</p>
+            <p>Romoufer 2022</p>
+        </footer>
+
+        <script type="text/javascript" src="javascript/menu.js"></script>
+
+    </body>
+</html>
