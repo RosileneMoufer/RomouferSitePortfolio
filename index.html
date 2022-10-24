@@ -9,23 +9,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css" /> 
         <title>Landpage</title>
-        <script type="text/javascript" src="data/data.js"></script>
+        <script src="data/data.js" type="text/javascript"></script>
+        <script src="components/menu/menu.js" type="text/javascript" defer></script>
       </head>
 
     <body>
-        <header id="#home">
-            <h3>Romoufer</h3>
-
-            <button aria-label="Abrir menu"  aria-controls="menu" aria-haspopup="true" aria-expanded="false"
-              id="menu-mobile"><span id="hamburger"></span></button>
-
-            <nav id="nav" role="menu">
-                <a role="menuitem" href="#home">Home</a>
-                <a role="menuitem" href="#section-about">Sobre</a>
-                <a role="menuitem" href="#">Contato</a>
-                <a role="menuitem" href="#" class="link-portfolio">Portfólio</a>
-            </nav>
-        </header>
+        <header-component></header-component>
 
         <main>
             <section id="section-home">
